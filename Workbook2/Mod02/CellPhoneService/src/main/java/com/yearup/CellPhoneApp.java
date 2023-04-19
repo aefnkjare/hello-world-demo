@@ -2,11 +2,16 @@ package com.yearup;
 
 public class CellPhoneApp {
     public static void main(String[] args){
+        CellPhone myPhone = new CellPhone(
+                1836483,
+                "790123771",
+                "298984342972",
+                "2941732943",
+                "Isaiah");
 
-    }
 }
 
-class CellPhone {
+static class CellPhone {
     //Properties
     private long serialNumber;
     private String model;
@@ -16,7 +21,7 @@ class CellPhone {
 
     // Constructors
 
-    public CellPhone(long serialNumber,String model,String carrier,String phoneNumber, String owner){
+    public CellPhone(long serialNumber, String model, String carrier, String phoneNumber, String owner) {
         this.serialNumber = serialNumber;
         this.model = model;
         this.carrier = carrier;
@@ -24,39 +29,58 @@ class CellPhone {
         this.owner = owner;
     }
 
-    // Getters and Setters
-    public long getSerialNumber(){
-        return this.serialNumber;
+    public static void dial(String s) {
+
     }
-    public void setSerialNumber(long serialNumber){
+
+    // Getters and Setters
+
+
+    public long getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setSerialNumber(long serialNumber) {
         this.serialNumber = serialNumber;
     }
-    public String getModel(){
-        return this.model;
+
+    public String getModel() {
+        return model;
     }
-    public void setModel(String model){
+
+    public void setModel(String model) {
         this.model = model;
     }
-    public String getCarrier(){
-        return this.carrier;
+
+    public String getCarrier() {
+        return carrier;
     }
-    public void setCarrier(String carrier){
+
+    public void setCarrier(String carrier) {
         this.carrier = carrier;
     }
-    public String getPhoneNumber(){
-        return this.phoneNumber;
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
-    public void setPhoneNumber(String phoneNumber){
+
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-    public String getOwner(){
-        return this.owner;
+
+    public String getOwner() {
+        return owner;
     }
-    public void setOwner(String owner){
+
+    public void setOwner(String owner) {
         this.owner = owner;
     }
 }
 
+    public void dial() {
+        this.dial() = this.dial();
+    }
+}
 ////////////////
 
 //class Animal {
