@@ -9,8 +9,10 @@ public class CellPhoneApp {
                 "2941732943",
                 "Isaiah");
 
-}
+//        CellPhone yourPhone = new CellPhone();
 
+}
+public void overload(){}
 static class CellPhone {
     //Properties
     private long serialNumber;
@@ -30,8 +32,13 @@ static class CellPhone {
     }
 
     public static void dial(String s) {
-
+        System.out.println("owner's phone is calling");
     }
+///////////////need help finishing the dial method////////////
+//    public void dial() {
+//        this.dial() = this.dial();
+//    }
+
 
     // Getters and Setters
 
@@ -77,9 +84,6 @@ static class CellPhone {
     }
 }
 
-    public void dial() {
-        this.dial() = this.dial();
-    }
 }
 ////////////////
 
