@@ -1,20 +1,41 @@
 package com.yearup;
 
+import java.awt.*;
+
 public class CellPhoneApp {
     public static void main(String[] args){
         CellPhone myPhone = new CellPhone(
                 1836483,
-                "790123771",
+                "Samsung Galaxy",
                 "298984342972",
                 "2941732943",
                 "Isaiah");
 
-//        CellPhone yourPhone = new CellPhone();
+        CellPhone yourPhone = new CellPhone();
+        yourPhone.setSerialNumber(27247142);
+        yourPhone.setModel("iPhone 14");
+        yourPhone.setCarrier("Verizon");
+        yourPhone.setPhoneNumber("704-129-7882");
+        yourPhone.setOwner("Laura");
 
-}
+//        yourPhone.display();
+//
+////        myPhone.dial(yourPhone.getPhoneNumber());
+////
+////        myPhone.dial(yourPhone);
+//
+        display(myPhone);
+        display(yourPhone);
+
+        myPhone.dial(yourPhone);
+
+    }
+    public static void display(CellPhone cellPhone){
+        cellPhone.display();
+    }
 public void overload(){}
 static class CellPhone {
-    //Properties
+    // Properties
     private long serialNumber;
     private String model;
     private String carrier;
@@ -31,9 +52,21 @@ static class CellPhone {
         this.owner = owner;
     }
 
-    public static void dial(String s) {
-        System.out.println("owner's phone is calling");
+    public void dial(String phoneNumber2) {
+        System.out.println(this.owner + "'s phone is calling " + phoneNumber2);
     }
+
+    public void dial(CellPhone cellPhone){
+       dial(cellPhone.getPhoneNumber());
+    }
+    public void display(){
+        System.out.println("Serial Number: " + this.serialNumber);
+        System.out.println("Model: " + this.model);
+        System.out.println("Carrier: " + this.carrier);
+        System.out.println("Phone Number: " + this.phoneNumber);
+        System.out.println("Owner: " + this.owner);
+    }
+    public CellPhone(){}
 ///////////////need help finishing the dial method////////////
 //    public void dial() {
 //        this.dial() = this.dial();
